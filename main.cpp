@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <cassert>
 
 #include "determinantMximizer.h"
 
@@ -17,16 +16,7 @@ int main() {
     }
 
     DeterminantMaximizer determinantMaximizer(matrix);
-    std:: cout << determinantMaximizer.Determinant() << '\n';
-
-//    DeterminantMaximizer::FlipSideDiag(matrix, {0, 0}, {4, 4});
-
-//    for (auto& line: matrix) {
-//        for (auto& el: line) {
-//            std::cout << el << ' ';
-//        }
-//        std::cout << '\n';
-//    }
+    std:: cout << determinantMaximizer.findMaxDet() << '\n';
 
     return 0;
 }

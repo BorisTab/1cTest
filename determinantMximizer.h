@@ -1,13 +1,16 @@
 #ifndef INC_1CTEST_DETERMINANTMXIMIZER_H
 #define INC_1CTEST_DETERMINANTMXIMIZER_H
 
+#include <cassert>
+#include <vector>
+
 struct Point {
     int64_t x = 0;
     int64_t y = 0;
 };
 
 /*!
- *  @brief Класс, который найходит максимальный определитель матрицы,
+ *  @brief Класс, который найходит максимальный определитель матрицы c вещественными значениями,
  *  использую отражение подматриц относительно диагоналей
  */
 class DeterminantMaximizer {
@@ -35,11 +38,36 @@ public:
         return DiagonalMatrixDet(LMatrix) * DiagonalMatrixDet(UMatrix);
     }
 
+    /*!
+     * @brief Находит максимальный определитель матрицы,
+     *  использую отражение подматриц относительно диагоналей
+     *
+     * @return Максимальный определитель
+     */
     double findMaxDet() {
+        maxDet = Determinant();
 
+        //Implementation must be here
+
+        return maxDet;
     }
 
 private:
+    /*!
+     * @brief Устанвливает максимальный по абсолютному значению определитель между текущем и переданным
+     *
+     * @param[in] det Кандидат на максимальное значение
+     * @return true, если новое значение больше? false иначе
+     */
+    bool setMaxDet(double det) {
+        if (std::abs(det) > maxDet) {
+            maxDet = std::abs(det);
+            return true;
+        }
+
+        return false;
+    }
+
     /*!
      * @brief Отражает подматрицу относительно главной диагонали
      *
@@ -137,7 +165,7 @@ private:
     std::vector<std::vector<double>> LMatrix;
     std::vector<std::vector<double>> UMatrix;
 
-    size_t maxDet;
+    double maxDet;
 };
 
 

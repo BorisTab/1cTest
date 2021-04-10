@@ -2,7 +2,7 @@
 \label{class_determinant_maximizer}\index{DeterminantMaximizer@{DeterminantMaximizer}}
 
 
-Класс, который найходит максимальный определитель матрицы, использую отражение подматриц относительно диагоналей  
+Класс, который найходит максимальный определитель матрицы c вещественными значениями, использую отражение подматриц относительно диагоналей  
 
 
 
@@ -15,11 +15,13 @@
 \mbox{\hyperlink{class_determinant_maximizer_a66fafd30deaba058cddb326fca60fce5}{Determinant\+Maximizer}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&input\+Matrix)
 \begin{DoxyCompactList}\small\item\em Конструктор от сслыки на матрицу, не копирует матрицу \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_determinant_maximizer_afab83f691fab676465b5ce5773abcd0f}{Determinant}} ()
-\begin{DoxyCompactList}\small\item\em находит определитель матрицы \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em находит определитель матрицы \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_determinant_maximizer_ab6dcf3645e2efd1729f7a85c739bcb60}{find\+Max\+Det}} ()
+\begin{DoxyCompactList}\small\item\em Находит максимальный определитель матрицы, использую отражение подматриц относительно диагоналей \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Класс, который найходит максимальный определитель матрицы, использую отражение подматриц относительно диагоналей 
+Класс, который найходит максимальный определитель матрицы c вещественными значениями, использую отражение подматриц относительно диагоналей 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_determinant_maximizer_a66fafd30deaba058cddb326fca60fce5}\label{class_determinant_maximizer_a66fafd30deaba058cddb326fca60fce5}} 
@@ -52,6 +54,19 @@ double \mbox{\hyperlink{class_determinant_maximizer_afab83f691fab676465b5ce5773a
 
 \begin{DoxyReturn}{Returns}
 Определитель мактрицы 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_determinant_maximizer_ab6dcf3645e2efd1729f7a85c739bcb60}\label{class_determinant_maximizer_ab6dcf3645e2efd1729f7a85c739bcb60}} 
+\index{DeterminantMaximizer@{DeterminantMaximizer}!findMaxDet@{findMaxDet}}
+\index{findMaxDet@{findMaxDet}!DeterminantMaximizer@{DeterminantMaximizer}}
+\doxysubsubsection{\texorpdfstring{findMaxDet()}{findMaxDet()}}
+{\footnotesize\ttfamily double Determinant\+Maximizer\+::find\+Max\+Det (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Находит максимальный определитель матрицы, использую отражение подматриц относительно диагоналей 
+
+\begin{DoxyReturn}{Returns}
+Максимальный определитель 
 \end{DoxyReturn}
 
 
